@@ -11,6 +11,7 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 public class EurekaServiceApplication {
 //main boot class for gateway 
 	public static void main(String[] args) {
+		System.out.println("Main ");
 		SpringApplication.run(EurekaServiceApplication.class, args);
 	}
 
