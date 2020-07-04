@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: techsol-gateway
+
+server:
+  port: 8090
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    
+      
+zuul:
+  prefix: /api
+  routes:
+    auth-service: 
+      path: /auth-service/**
+      url: http://localhost:8091
+    order-service:
+      path: /order-service/**
+      url: http://localhost:8092
+      
+      
+
+      
